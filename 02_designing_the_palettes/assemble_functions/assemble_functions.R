@@ -2,30 +2,24 @@
 
 GrisPalettes <- list(
   "Gris" = list(c("#354B7E", "#6680A3", "#DFE0E1", "#C7A459", "#6E2F35"), c(1:5), colorblind = FALSE), 
-  "Denial" = list(c("#DCDADB", "#8D8E93", "#6A676B", "#2E3033", "#707374"), c(1:5), colorblind = TRUE),
+  "Denial" = list(c("#EDEBEA", "#DFDEDD", "#BEBEC1", "#7E7F82", "#2C2E31"), c(1:5), colorblind = TRUE),
   "DesertPath" = list(c("#F1DFD6", "#EB8D8D", "#D14341", "#A81F21", "#4D0E12"), c(1:5), colorblind = TRUE), 
   "Windswept" = list(c("#835D60", "#F2BDB9", "#E2676F", "#A05B53", "#7B3538"), c(1:5), colorblind = FALSE), 
-  "GiantTree" = list(c("#86A19A", "#677173", "#4B3938", "#B84753", "#963B43"), c(1:5), colorblind = FALSE), 
-  "DoubleJump" = list(c("#773B3C", "#D18587", "#F7F1ED", "#88A9A3", "#79918F"), c(1:5), colorblind = FALSE), 
-  "ForestFriend" = list(c("#3D483E", "#D5B3A1", "#AC7372", "#A2374C", "#BA5E4B"), c(1:5), colorblind = FALSE),
-  #"WaterDrops" = list(c("#596695", "#0F294C", "#5EA2C5", "#CEF1F9", "#527384"), c(1:5), colorblind = FALSE), 
-  "TunnelChase" = list(c("#020406", "#062C53", "#1B7DA1", "#3BAED5", "#54D1E8"), c(1:5), colorblind = FALSE), 
-  #"CrystalCave" = list(c("#9BDEF7", "#43B5DF", "#156999", "#053C5A", "#175E73"), c(1:5), colorblind = TRUE), 
-  "TurtleLight" = list(c("#38336E", "#7483B8", "#7CACCC", "#793B6C", "#BD90BD"), c(1:5), colorblind = FALSE), 
-  "ShiningTree" = list(c("#0C1011", "#3E5F54", "#5F8072", "#e2e288", "#759988"), c(1:5), colorblind = FALSE), 
-  "LightGuide" = list(c("#2B294F", "#2E6576", "#1DA4B8", "#118BA6", "#A1E2C5"), c(1:5), colorblind = FALSE),
+  "GiantTree" = list(c("#8DBEB2", "#526468", "#41302F", "#8B3D46", "#DD6164"), c(1:5), colorblind = FALSE), 
+  "DoubleJump" = list(c("#773B3C", "#D18587", "#F7F1ED", "#88A9A3", "#627977"), c(1:5), colorblind = FALSE), 
+  "ForestFriend" = list(c("#84ACA4", "#68826B", "#E0A489", "#A2374C", "#64333C"), c(1:5), colorblind = FALSE),
+  "TunnelChase" = list(c("#020406", "#062C53", "#1B7DA1", "#3BAED5", "#54D1E8"), c(1:5), colorblind = TRUE), 
+  "TurtleLight" = list(c("#38336E", "#7483B8", "#B6AEB9", "#B64A6C", "#8A2857"), c(1:5), colorblind = FALSE), 
+  "ShiningTree" = list(c("#0C1011", "#3E5F54", "#64B7A1", "#D5E7C1", "#e2e288"), c(1:5), colorblind = TRUE), 
+  "LightGuide" = list(c("#2B294F", "#144666", "#1DA4B8", "#A1E2C5", "#F3F7D6"), c(1:5), colorblind = TRUE),
   "FlowerBridge" = list(c("#CCC6C6", "#8F8EA3", "#7C748C", "#2E1A37", "#D9647A"), c(1:5), colorblind = FALSE), 
-  "Starlight" = list(c("#33122A", "#6D3847", "#E4B476", "#879799", "#554D65"), c(1:5), colorblind = FALSE),
-  #"StarLight2" = list(c("#554D65", "#879498", "#E4B476", "#652330", "#33122A"), c(1:5), colorblind = FALSE),
-  #"Moon1" = list(c("#755275", "#2E1F42", "#378AA9", "#34A8BF", "#F7F5DB"), c(1:5), colorblind = FALSE), 
-  "Moonbeam" = list(c("#EED9C8", "#827A9C", "#7D285B", "#360830", "#98B8AE"), c(1:5), colorblind = FALSE), 
+  "Starlight" = list(c("#3D1632", "#D15A56", "#E4B476", "#9AACAE", "#63577C"), c(1:5), colorblind = FALSE),
+  "Moonbeam" = list(c("#EED9C8", "#827A9C", "#7D285B", "#360830", "#98B8AE"), c(1:5), colorblind = TRUE), 
   "FowlSong" = list(c("#06324B", "#047183", "#14BABC", "#045F62", "#A95C9A"), c(1:5), colorblind = FALSE),
-  #"Fowl2" = list(c("#C44257", "#321D3A", "#f3c87a", "#64768E", "#9092A5"), c(1:5), colorblind = FALSE),
-  "CloudPath" = list(c("#5991D2", "#DDD6EE", "#AFAEDA", "#A777AC", "#9752A9"), c(1:5), colorblind = FALSE),
-  "BirdFlight" = list(c("#487692", "#74AFCF", "#82D5D0", "#DAAFBA", "#D9647A"), c(1:5), colorblind = FALSE), 
+  "CloudPath" = list(c("#B4DFF6", "#99CCF4", "#729EE1", "#AFA4E2", "#A060B0"), c(1:5), colorblind = FALSE),
+  "BirdFlight" = list(c("#245688", "#74AFCF", "#82D5D0", "#DAAFBA", "#D9647A"), c(1:5), colorblind = FALSE), 
   "Healing" = list(c("#52AE9A", "#77C8B8", "#D6C8BA", "#DB8F50", "#C54652"), c(1:5), colorblind = FALSE)
 )
-
 
 # make palette
 

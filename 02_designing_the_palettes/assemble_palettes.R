@@ -1,44 +1,45 @@
 source("02_designing_the_palettes/assemble_functions/assemble_functions.R")
 
+# display all
 display_all()
 
+# make example plots to check usability
 
-# Gris Logo
+library(palmerpenguins)
+library(ggplot2)
+library(dplyr)
+library("gridExtra")
 
-Gris <- list("Gris", c("#354B7E", "#6680A3", "#DFE0E1", "#C7A459", "#6E2F35"))
+head(penguins)
 
-print_palette(Gris)
+ggplot(penguins, aes(x = bill_length_mm, y = flipper_length_mm))+
+  theme_bw()+
+  geom_point(size = 3, aes(color = species))
 
-# Grey - Denial
-# 
-# Light
-# 
-# dark
-# 
-# Red - Anger
-# 
-# Windswept desert (light)
+head(diamonds)
 
-windswept_desert <- list("WindsweptDesert", c("#F1DFD6", "#EB8D8D", "#D14341", "#A81F21", "#4D0E12"))
+names(GrisPalettes[1])
 
-print_palette(windswept_desert)
+grisplots <- list()
 
+i <- 17
 
-# Windmill caverns (dark)
-# windswept_desert <- list("WindsweptDesert", c("#", "#", "#", "#", "#"))
-# Green - Bargaining
-# 
-# Forest friend (apple, double jump)
-# Black bird
-# 
-# Blue - Depression
-# 
-# Underground tunnels (chasing the star, crystal cave)
-# 
-# Yellow - Acceptance
-# 
-# Turtle of light (eel, the light tree)
-# Light will guide the way
-# Stars and fowls
+for (i in 1:length(GrisPalettes)) {
+  
+pal <- grisbrewer(names(GrisPalettes[i]))
+
+p <- diamonds %>%
+    filter(color == "E") %>%
+    sample_n(., 200, seed = 13) %>%
+    ggplot(., aes(x = clarity , y = depth))+
+    theme_bw()+
+    geom_point(size = 5, shape = 21, aes(fill = cut), position = position_jitter(width = 0.2))+
+    scale_fill_manual(values = pal)+
+    ylim(55,65)+
+    ggtitle(names(GrisPalettes[i]))
+
+print(p)
+
+}
 
 
