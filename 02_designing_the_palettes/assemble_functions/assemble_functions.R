@@ -14,16 +14,18 @@ GrisPalettes <- list(
   "TurtleLight" = list(c("#38336E", "#7483B8", "#7CACCC", "#793B6C", "#BD90BD"), c(1:5), colorblind = FALSE), 
   "ShiningTree" = list(c("#0C1011", "#3E5F54", "#5F8072", "#e2e288", "#759988"), c(1:5), colorblind = FALSE), 
   "LightGuide" = list(c("#2B294F", "#2E6576", "#1DA4B8", "#118BA6", "#A1E2C5"), c(1:5), colorblind = FALSE),
-  "CloudPath" = list(c("#2C1A47", "#855F8F", "#CA8B8E", "#9FB0D5", "#331531"), c(1:5), colorblind = FALSE),
-  "Starlight" = list(c("#170826", "#6D3847", "#E4B476", "#879799", "#74A1AF"), c(1:5), colorblind = FALSE), 
+  "FlowerBridge" = list(c("#CCC6C6", "#8F8EA3", "#7C748C", "#2E1A37", "#D9647A"), c(1:5), colorblind = FALSE), 
+  "Starlight" = list(c("#33122A", "#6D3847", "#E4B476", "#879799", "#554D65"), c(1:5), colorblind = FALSE),
+  #"StarLight2" = list(c("#554D65", "#879498", "#E4B476", "#652330", "#33122A"), c(1:5), colorblind = FALSE),
   #"Moon1" = list(c("#755275", "#2E1F42", "#378AA9", "#34A8BF", "#F7F5DB"), c(1:5), colorblind = FALSE), 
   "Moonbeam" = list(c("#EED9C8", "#827A9C", "#7D285B", "#360830", "#98B8AE"), c(1:5), colorblind = FALSE), 
   "FowlSong" = list(c("#06324B", "#047183", "#14BABC", "#045F62", "#A95C9A"), c(1:5), colorblind = FALSE),
   #"Fowl2" = list(c("#C44257", "#321D3A", "#f3c87a", "#64768E", "#9092A5"), c(1:5), colorblind = FALSE),
-  "FlowerBridge" = list(c("#CCC6C6", "#8F8EA3", "#7C748C", "#2E1A37", "#D9647A"), c(1:5), colorblind = FALSE)
+  "CloudPath" = list(c("#5991D2", "#DDD6EE", "#AFAEDA", "#A777AC", "#9752A9"), c(1:5), colorblind = FALSE),
+  "BirdFlight" = list(c("#487692", "#74AFCF", "#82D5D0", "#DAAFBA", "#D9647A"), c(1:5), colorblind = FALSE), 
+  "Healing" = list(c("#52AE9A", "#77C8B8", "#D6C8BA", "#DB8F50", "#C54652"), c(1:5), colorblind = FALSE)
 )
 
-display_all()
 
 # make palette
 
