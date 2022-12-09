@@ -1,3 +1,10 @@
+
+library(palmerpenguins)
+library(ggplot2)
+library(dplyr)
+library(gridExtra)
+library(ggstream)
+
 source("02_designing_the_palettes/assemble_functions/assemble_functions.R")
 
 # display all
@@ -5,10 +12,6 @@ display_all()
 
 # make example plots to check usability
 
-library(palmerpenguins)
-library(ggplot2)
-library(dplyr)
-library("gridExtra")
 
 head(penguins)
 
@@ -43,23 +46,17 @@ print(p)
 # make stream graph examples
 
 # Library
-library(streamgraph)
-library(ggplot2movies)
 
 for (i in 1:length(GrisPalettes)) {
   
 streampal <- grisbrewer(names(GrisPalettes[i]))
 
-ggplot2movies::movies %>%
-  select(year, Action, Animation, Comedy, Drama, Romance) %>%
-  tidyr::gather(genre, value, -year) %>%
-  filter(year > 1940 & year < 1980) %>%
-  group_by(year, genre) %>%
-  tally(wt=value) -> dat
-
-p <- streamgraph(dat, "genre", "n", "year", interactive=FALSE) %>%
-  sg_axis_x(5, "year", "%Y") %>%
-  sg_fill_manual(streampal)
+p <- ggplot(blockbusters, aes(x = year, y = box_office, fill = genre)) +
+  geom_stream(extra_span = 0.2) +
+  geom_stream(extra_span = 0.2, true_range = "none") +
+  scale_fill_manual(values = streampal) +
+  theme_void()+
+  theme(legend.position = "")
 
 print(p)
 
@@ -76,17 +73,11 @@ print(p)
 
 streampal <- grisbrewer(names(GrisPalettes[1]))
 
-ggplot2movies::movies %>%
-  select(year, Action, Animation, Comedy, Drama, Romance) %>%
-  tidyr::gather(genre, value, -year) %>%
-  filter(year > 1940 & year < 1980) %>%
-  group_by(year, genre) %>%
-  tally(wt=value) -> dat
-
-p <- streamgraph(dat, "genre", "n", "year", interactive=FALSE) %>%
-  sg_axis_x(5, "year", "%Y") %>%
-  sg_fill_manual(streampal)
-
-print(p)
+ggplot(blockbusters, aes(x = year, y = box_office, fill = genre)) +
+  geom_stream(extra_span = 0.2) +
+  geom_stream(extra_span = 0.2, true_range = "none") +
+  scale_fill_manual(values = streampal) +
+  theme_void()+
+  theme(legend.position = "")
 
 
