@@ -56,7 +56,9 @@ p <- ggplot(blockbusters, aes(x = year, y = box_office, fill = genre)) +
   geom_stream(extra_span = 0.2, true_range = "none") +
   scale_fill_manual(values = streampal) +
   theme_void()+
-  theme(legend.position = "")
+  theme(legend.position = "", 
+        plot.title = element_text(size = 40, face = "italic", family = "serif", hjust = 0.5, vjust = -2))+
+  ggtitle(names(GrisPalettes[i]))
 
 print(p)
 
@@ -78,6 +80,8 @@ ggplot(blockbusters, aes(x = year, y = box_office, fill = genre)) +
   geom_stream(extra_span = 0.2, true_range = "none") +
   scale_fill_manual(values = streampal) +
   theme_void()+
-  theme(legend.position = "")
+  theme(legend.position = "", 
+        plot.title = element_text(size = 40, face = "italic", family = "serif", hjust = 0.5, vjust = -2))+
+  ggtitle(names(GrisPalettes[1]))
 
 
