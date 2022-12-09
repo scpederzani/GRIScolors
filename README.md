@@ -7,3 +7,7 @@ This repository is still under construction with the aim to produce a fully func
 ## Palettes
 
 ![Gris palettes](https://github.com/scpederzani/GRIScolors/blob/main/display_all.png)
+
+## Plot examples
+
+![Starlight streamgraph](https://github.com/scpederzani/GRIScolors/blob/main/03_plot_examples/Starlight_streamgraph.png)
