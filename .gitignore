@@ -38,3 +38,5 @@ vignettes/*.pdf
 01_screenshots_notes/
 
 *.Rproj
+
+*.png
