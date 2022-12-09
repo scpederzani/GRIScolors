@@ -16,9 +16,7 @@ ggplot(penguins, aes(x = bill_length_mm, y = flipper_length_mm))+
   theme_bw()+
   geom_point(size = 3, aes(color = species))
 
-head(diamonds)
-
-names(GrisPalettes[1])
+# run all palettes through scatter plots to check colors are distinguishable
 
 grisplots <- list()
 
@@ -41,5 +39,41 @@ p <- diamonds %>%
 print(p)
 
 }
+
+# make stream graph examples
+
+# Library
+library(streamgraph)
+library(ggplot2movies)
+
+for (i in 1:length(GrisPalettes)) {
+  
+streampal <- grisbrewer(names(GrisPalettes[i]))
+
+ggplot2movies::movies %>%
+  select(year, Action, Animation, Comedy, Drama, Romance) %>%
+  tidyr::gather(genre, value, -year) %>%
+  filter(year > 1940 & year < 1980) %>%
+  group_by(year, genre) %>%
+  tally(wt=value) -> dat
+
+p <- streamgraph(dat, "genre", "n", "year", interactive=FALSE) %>%
+  sg_axis_x(5, "year", "%Y") %>%
+  sg_fill_manual(streampal)
+
+print(p)
+
+}
+
+# very good palettes for stream graph so far: Starlight, DoubleJump
+# good: Healing, Cloudpath, Lightguide, Turtlelight, Gris
+# mayber reorder: Flowerbridge, Lightguide, TunnelChase, GiantTree, DesertPath, Denial (try putting lightest or darkest in middle)
+# notes: healing grey should be lighter, Gris more saturated, grey in Turtle light needs to be lighter
+# notes: Forestfriend greens clash and orange is ugly, middle Brown in Windswept is ugly
+
+
+
+
+
 
 
