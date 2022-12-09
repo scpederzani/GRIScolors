@@ -1,4 +1,4 @@
-# griscolors <img align="right" src="https://github.com/scpederzani/griscolors/blob/main/Gris_logo_wide.jpg" width=400>
+# griscolors <img align="right" src="https://github.com/scpederzani/GRIScolors/blob/main/Gris_logo_wide.jpg" width=400>
 
 Color palettes inspired by the art of Gris, a stunning adventure game taking the player on an evocative emotional journey of loss and healing. 
 
@@ -6,4 +6,4 @@ This repository is still under construction with the aim to produce a fully func
 
 ## Palettes
 
-![Gris palettes](https://github.com/scpederzani/griscolors/blob/main/display_all.png)
+![Gris palettes](https://github.com/scpederzani/GRIScolors/blob/main/display_all.png)
