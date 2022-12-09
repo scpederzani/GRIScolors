@@ -6,4 +6,4 @@ This repository is still under construction with the aim to produce a fully func
 
 ## Palettes
 
-![Gris palettes](https://github.com/scpederzani/griscolors/blob/main/display_all.png)
+ <img align="left" src="https://github.com/scpederzani/griscolors/blob/main/display_all.png" width = 600>
