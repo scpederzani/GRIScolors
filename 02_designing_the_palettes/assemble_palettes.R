@@ -72,8 +72,21 @@ print(p)
 # notes: Forestfriend greens clash and orange is ugly, middle Brown in Windswept is ugly
 
 
+# Gris streamgraph
 
+streampal <- grisbrewer(names(GrisPalettes[1]))
 
+ggplot2movies::movies %>%
+  select(year, Action, Animation, Comedy, Drama, Romance) %>%
+  tidyr::gather(genre, value, -year) %>%
+  filter(year > 1940 & year < 1980) %>%
+  group_by(year, genre) %>%
+  tally(wt=value) -> dat
 
+p <- streamgraph(dat, "genre", "n", "year", interactive=FALSE) %>%
+  sg_axis_x(5, "year", "%Y") %>%
+  sg_fill_manual(streampal)
+
+print(p)
 
 

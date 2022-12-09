@@ -1,7 +1,8 @@
 # list palettes
 
 GrisPalettes <- list(
-  "Gris" = list(c("#354B7E", "#6680A3", "#DFE0E1", "#C7A459", "#6E2F35"), c(1:5), colorblind = FALSE), 
+  "Gris" = list(c("#4B6097", "#59A6AB", "#EDEDE8", "#F6C761", "#D17067"), c(1:5), colorblind = FALSE), 
+  # "Begin" = list(c("#303336", "#3BA398", "#EDEDE8", "#E0D5A0", "#F99E12"), c(1:5), colorblind = FALSE), 
   "Denial" = list(c("#EDEBEA", "#DFDEDD", "#BEBEC1", "#7E7F82", "#2C2E31"), c(1:5), colorblind = TRUE),
   "DesertPath" = list(c("#F1DFD6", "#EB8D8D", "#D14341", "#A81F21", "#4D0E12"), c(1:5), colorblind = TRUE), 
   "Windswept" = list(c("#835D60", "#F2BDB9", "#E2676F", "#A05B53", "#7B3538"), c(1:5), colorblind = FALSE), 
