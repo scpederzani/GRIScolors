@@ -21,7 +21,7 @@ GrisPalettes <- list(
   "Healing" = list(c("#52AE9A", "#77C8B8", "#D6C8BA", "#DB8F50", "#C54652"), c(1:5), colorblind = FALSE)
 )
 
-# make palette
+# make palette (adapted from MetBrewer package, runs but needs work on discrete vs continuous palettes)
 
 grisbrewer <- function(palette_name, n, type = c("discrete", "continuous"), direction = c(1, -1), override.order = FALSE) {
   
@@ -81,7 +81,7 @@ grisbrewer <- function(palette_name, n, type = c("discrete", "continuous"), dire
 
 
 
-
+# print individual palette
 
 
 print_palette <- function(x, ...) {
@@ -95,6 +95,8 @@ print_palette <- function(x, ...) {
   rect(0, 0.92, n + 1, 1.08, col = rgb(1, 1, 1, 0.8), border = NA)
   text((n + 1) / 2, 1, labels = attr(x, "name"), cex = 2.5, family = "serif")
 }
+
+# display all palettes (adapted from MetBrewer package, runs but needs work on the colorblind selection)
 
 
 display_all <- function(n, sequential = FALSE, colorblind_only = FALSE, direction = 1, override.order=FALSE){
