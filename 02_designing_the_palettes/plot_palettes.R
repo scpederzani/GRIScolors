@@ -1,11 +1,16 @@
 
+#library(tidyverse)
 library(palmerpenguins)
 library(ggplot2)
 library(dplyr)
 library(gridExtra)
 library(ggstream)
+library(hexbin)
+library(Hmisc)
+library(cowplot)
+library(patchwork)
 
-source("02_designing_the_palettes/assemble_functions/assemble_functions.R")
+source("02_designing_the_palettes/palettes_and_functions/palettes_and_functions.R")
 
 # display all
 display_all()
@@ -83,5 +88,64 @@ ggplot(blockbusters, aes(x = year, y = box_office, fill = genre)) +
   theme(legend.position = "", 
         plot.title = element_text(size = 40, face = "italic", family = "serif", hjust = 0.5, vjust = -2))+
   ggtitle(names(GrisPalettes[1]))
+
+
+# heatmaps
+
+heatpal1 <- grisbrewer(names(GrisPalettes[5]))
+heatpal2 <- grisbrewer(names(GrisPalettes[20]))
+heatpal3 <- grisbrewer(names(GrisPalettes[22]))
+heatpal4 <- grisbrewer(names(GrisPalettes[23]))
+
+a <- data.frame( x=rnorm(20000, 10, 1.9), y=rnorm(20000, 10, 1.2) )
+b <- data.frame( x=rnorm(20000, 14.5, 1.9), y=rnorm(20000, 14.5, 1.9) )
+c <- data.frame( x=rnorm(20000, 9.5, 1.9), y=rnorm(20000, 15.5, 1.9) )
+
+heat_data <- rbind(a,b,c)
+
+heat_data_bin <- hexbin(heat_data)
+
+hex <- heat_data_bin
+
+gghex <- data.frame(hcell2xy(hex), count = hex@count,
+                    xo = hex@xcm, yo = hex@ycm,
+                    c = cut2(hex@count, g = 40))
+
+heat1 <- ggplot(gghex) +
+  geom_hex(aes(x = x, y = y, fill = c),
+           color = "black", stat = "identity", lwd = 0.001)+
+  theme_void()+
+  theme(legend.position = "")+
+  scale_fill_manual(values = colorRampPalette(rev(heatpal1))( 40 ))
+
+heat2 <- ggplot(gghex) +
+  geom_hex(aes(x = x, y = y, fill = c),
+           color = "black", stat = "identity", lwd = 0.001)+
+  theme_void()+
+  theme(legend.position = "")+
+  scale_fill_manual(values = colorRampPalette(heatpal2)( 40 ))
+
+heat3 <- ggplot(gghex) +
+  geom_hex(aes(x = x, y = y, fill = c),
+           color = "black", stat = "identity", lwd = 0.001)+
+  theme_void()+
+  theme(legend.position = "")+
+  scale_fill_manual(values = colorRampPalette(heatpal3)( 40 ))
+
+heat4 <- ggplot(gghex) +
+  geom_hex(aes(x = x, y = y, fill = c),
+           color = "black", stat = "identity", lwd = 0.001)+
+  theme_void()+
+  theme(legend.position = "")+
+  scale_fill_manual(values = colorRampPalette(heatpal4)( 40 ))
+
+
+(heat1 + heat2) / (heat3 + heat4)
+
+
+
+
+
+
 
 
